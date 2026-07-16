@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abraham | Warzone Pro Player & Streamer</title>
+    <!-- Fuente ultra-moderna estilo eSports -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* --- variables de diseño (Paleta: Azul, Púrpura y Verde) --- */
+      :root {
+        --bg-dark: #080b11; /* Azul base ultra oscuro */
+        --bg-card: #101626; /* Azul intermedio para paneles */
+        --primary-purple: #8b5cf6; /* Púrpura de Twitch / Gaming */
+        --primary-green: #10b981; /* Verde de victoria / Warzone */
+        --text-white: #f3f4f6; /* Texto claro */
+        --text-gray: #9ca3af; /* Texto secundario */
+      }
+
+      /* --- Reset y Estilos Globales --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-white);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .logo {
+        font-family: "Rajdhani", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 700;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 20px;
+      }
+
+      /* --- Barra de Navegación --- */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: rgba(8, 11, 17, 0.95);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--primary-purple);
+        backdrop-filter: blur(10px);
+      }
+
+      header .logo {
+        font-size: 1.8rem;
+        color: var(--text-white);
+      }
+
+      header .logo span {
+        color: var(--primary-green);
+      }
+
+      header nav a {
+        color: var(--text-gray);
+        text-decoration: none;
+        margin-left: 25px;
+        font-weight: 500;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+      }
+
+      header nav a:hover {
+        color: var(--primary-purple);
+      }
+
+      /* --- Sección Principal (Hero) --- */
+      .hero-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        min-height: 85vh;
+        gap: 50px;
+      }
+
+      .hero-content {
+        flex: 1.2;
+      }
+
+      .badge {
+        background-color: rgba(16, 185, 129, 0.1);
+        color: var(--primary-green);
+        padding: 6px 14px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        border: 1px solid var(--primary-green);
+        display: inline-block;
+        margin-bottom: 20px;
+        font-family: "Rajdhani", sans-serif;
+      }
+
+      .hero-content h1 {
+        font-size: 3.8rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffffff 40%, var(--primary-purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: var(--text-gray);
+        margin-bottom: 35px;
+        max-width: 520px;
+      }
+
+      /* Botones de Acción */
+      .cta-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      .btn-twitch {
+        background-color: var(--primary-purple);
+        color: white;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+      }
+
+      .btn-twitch:hover {
+        background-color: #7c3aed;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+      }
+
+      .btn-insta {
+        background-color: transparent;
+        color: var(--text-white);
+        border: 2px solid var(--text-gray);
+      }
+
+      .btn-insta:hover {
+        border-color: var(--primary-green);
+        color: var(--primary-green);
+        transform: translateY(-3px);
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+      }
+
+      /* Contenedor de la Imagen */
+      .hero-image {
+        flex: 0.8;
+        display: flex;
+        justify-content: center;
+      }
+
+      .profile-img {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 20px;
+        border: 4px solid var(--primary-purple);
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .profile-img:hover {
+        transform: scale(1.05) rotate(2deg);
+        border-color: var(--primary-green);
+        box-shadow: 0 0 35px rgba(16, 185, 129, 0.5);
+      }
+
+      /* --- Secciones de Contenido (Títulos) --- */
+      .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background-color: var(--primary-green);
+      }
+
+      /* --- Grid de Pasos --- */
+      .grid-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+      }
+
+      .step-card {
+        background-color: var(--bg-card);
+        padding: 35px 30px;
+        border-radius: 10px;
+        border-left: 4px solid var(--primary-purple);
+        transition: all 0.3s ease;
+      }
+
+      .step-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Resaltar la primera clase como pedías con verde */
+      .step-card.mi_clase {
+        border-left-color: var(--primary-green);
+      }
+
+      .step-num {
+        font-size: 2.5rem;
+        font-family: "Rajdhani", sans-serif;
+        color: rgba(255, 255, 255, 0.07);
+        display: block;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 15px;
+      }
+
+      .step-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+      }
+
+      .step-card p {
+        color: var(--text-gray);
+        font-size: 0.95rem;
+      }
+
+      /* --- Sección de Música de Inspiración --- */
+      .inspiration-section {
+        background-color: rgba(16, 22, 38, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .inspiration-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .inspiration-text {
+        font-size: 1.4rem;
+        font-family: "Rajdhani", sans-serif;
+        color: var(--primary-green);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        max-width: 700px;
+        font-weight: 600;
+        text-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+      }
+
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 640px;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 3px solid var(--primary-purple);
+        box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+        aspect-ratio: 16/9;
+        margin-bottom: 20px;
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .btn-video-fallback {
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1rem;
+        color: var(--text-gray);
+        text-decoration: none;
+        border-bottom: 1px dashed var(--text-gray);
+        transition: color 0.3s;
+      }
+
+      .btn-video-fallback:hover {
+        color: var(--primary-purple);
+        border-bottom-color: var(--primary-purple);
+      }
+
+      /* --- Sección Setup --- */
+      .setup-section {
+        background-color: var(--bg-card);
+      }
+
+      .text-center {
+        text-align: center;
+        display: block;
+      }
+
+      .text-center::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .setup-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .setup-item {
+        text-align: center;
+        padding: 25px;
+        background-color: rgba(8, 11, 17, 0.5);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        transition: border-color 0.3s;
+      }
+
+      .setup-item:hover {
+        border-color: var(--primary-purple);
+      }
+
+      .setup-icon {
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .setup-item h4 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: var(--primary-green);
+      }
+
+      .setup-item p {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+      }
+
+      /* --- Pie de Página --- */
+      footer {
+        background-color: var(--bg-dark);
+        padding: 40px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .footer-content {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .footer-content p {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .social-links a {
+        color: var(--text-gray);
+        text-decoration: none;
+        font-weight: 600;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: var(--primary-purple);
+      }
+
+      /* Botón del Himno con estilo verde */
+      .social-links a.himno-link {
+        color: var(--primary-green);
+      }
+      .social-links a.himno-link:hover {
+        text-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+      }
+
+      /* --- Responsivo para Móviles --- */
+      @media (max-width: 768px) {
+        .hero-section {
+          flex-direction: column-reverse;
+          text-align: center;
+          padding: 60px 20px;
+          gap: 30px;
+        }
+
+        .hero-content h1 {
+          font-size: 2.8rem;
+        }
+
+        .cta-buttons {
+          justify-content: center;
+        }
+
+        header {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+
+        header nav a {
+          margin: 0 10px;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menú Superior -->
+    <header>
+      <div class="logo">ABRAHAM<span>_</span></div>
+      <nav>
+        <a href="#perfil">Perfil</a>
+        <a href="#camino">Camino Pro</a>
+        <a href="#himno">Inspiración</a>
+        <a href="#setup">Setup</a>
+      </nav>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section id="perfil" class="hero-section">
+      <div class="hero-content">
+        <span class="badge">COMPETITIVE WARZONE PLAYER</span>
+        <h1>El trabajo de mis sueños</h1>
+        <p class="subtitle">
+          Ser un streamer famoso de Warzone y ganar la World Series of Warzone.
+          El camino es duro, pero la mentalidad es de campeón.
+        </p>
+        <div class="cta-buttons">
+          <a href="https://www.twitch.tv" target="_blank" class="btn btn-twitch"
+            >Ver Streams en Twitch</a
+          >
+          <a
+            href="https://www.instagram.com/abrvhm__/"
+            target="_blank"
+            class="btn btn-insta"
+            >Seguir en Instagram</a
+          >
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://media.tenor.com/ayv8tZ5H7E4AAAAe/quepro-que-pro-meme.png"
+          alt="Que Pro Abraham"
+          class="profile-img"
+        />
+      </div>
+    </section>
+
+    <!-- Sección Pasos a seguir (Trayectoria) -->
+    <section id="camino" class="container">
+      <h2 class="section-title">Pasos para Dominar el Servidor</h2>
+      <div class="grid-steps">
+        <div class="step-card mi_clase">
+          <!-- Tu clase personalizada con acento verde -->
+          <span class="step-num">01</span>
+          <h3>Entrenamiento Warzone</h3>
+          <p>
+            Practicar diariamente, perfeccionar el aim, dominar el movimiento
+            avanzado y estudiar las rotaciones tácticas.
+          </p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Contenido Épico</h3>
+          <p>
+            Crear clips de calidad, tutoriales con las mejores clases de armas y
+            mantener las redes activas.
+          </p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Comunidad</h3>
+          <p>
+            Interactuar con el chat, crear discord y jugar con seguidores para
+            construir una base sólida de fans.
+          </p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>Torneos y Copas</h3>
+          <p>
+            Inscribirse a torneos competitivos y competir contra los mejores del
+            mundo para demostrar el nivel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Inspiración Musical / Himno -->
+    <section id="himno" class="inspiration-section">
+      <div class="container inspiration-container">
+        <p class="inspiration-text">
+          "La siguiente canción me inspira para mejorar en cada partida"
+        </p>
+        <div class="video-wrapper">
+          <!-- Modificado con el nuevo video y youtube-nocookie para prevenir el Error 153 -->
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/mHJ3l18YqNM?si=Ynm0wRBq-nsbBCTY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <a
+          href="https://www.youtube.com/watch?v=mHJ3l18YqNM"
+          target="_blank"
+          class="btn-video-fallback"
+          >¿No carga el video? Escuchar directamente en YouTube ↗</a
+        >
+      </div>
+    </section>
+
+    <!-- Sección Qué quiero que tenga (Setup) -->
+    <section id="setup" class="setup-section">
+      <div class="container">
+        <h2 class="section-title text-center">El Arsenal del Pro Player</h2>
+        <div class="setup-grid">
+          <div class="setup-item">
+            <span class="setup-icon">🖥️</span>
+            <h4>Un Buen PC</h4>
+            <p>
+              Capaz de correr Warzone a +144 FPS estables para una ventaja de
+              tiempo de reacción total.
+            </p>
+          </div>
+          <div class="setup-item">
+            <span class="setup-icon">📷</span>
+            <h4>Una Buena Cámara</h4>
+            <p>
+              Garantizar que mi comunidad me vea con claridad cristalina en los
+              momentos más tensos.
+            </p>
+          </div>
+          <div class="setup-item">
+            <span class="setup-icon">🎙️</span>
+            <h4>Un Buen Micrófono</h4>
+            <p>
+              Para comunicarme con mi squad con absoluta nitidez y narrar las
+              jugadas sin distorsión.
+            </p>
+          </div>
+          <div class="setup-item">
+            <span class="setup-icon">💺</span>
+            <h4>Silla Gamer</h4>
+            <p>
+              Comodidad para las largas jornadas de scrims y directos en busca
+              de la corona.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página con Enlaces -->
+    <footer>
+      <div class="footer-content">
+        <p>© 2026 Abraham. Rumbo a la World Cup de Warzone.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/abrvhm__/" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://www.twitch.tv" target="_blank">Twitch</a>
+          <a
+            href="https://www.youtube.com/watch?v=mHJ3l18YqNM"
+            target="_blank"
+            class="himno-link"
+            >Himno Nacional</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
